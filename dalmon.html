@@ -355,6 +355,115 @@
             color: #4A5568;
             line-height: 1.5;
         }
+        /* --- PROSTORY NAŠÍ ŠKOLY --- */
+        .premises-intro {
+            max-width: 800px;
+            margin: -20px auto 40px;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #4A5568;
+        }
+
+        .premises-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .premises-card {
+            background: #fff;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid #edf2f7;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Šedý placeholder pro tvé fotky - až budeš mít fotky, nahraď celý div tagem img */
+        .image-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: #E2E8F0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #718096;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid #edf2f7;
+        }
+
+        .premises-info {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .premises-info h4 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .premises-info p {
+            font-size: 0.9rem;
+            color: #4A5568;
+            line-height: 1.6;
+        }
+
+        /* --- DLOUHODOBÉ PROJEKTY --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            border: 1px solid #edf2f7;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+            border-color: var(--primary-light);
+        }
+
+        .project-badge {
+            align-self: flex-start;
+            background-color: rgba(47, 133, 90, 0.1);
+            color: var(--success);
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        .project-card h3 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            color: #4A5568;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
@@ -369,10 +478,14 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="#o-skole">O škole</a></li>
+                <li><a href="#filozofie">Naše pilíře</a></li>
                 <li><a href="#vyuka">Jak učíme</a></li>
                 <li><a href="#skolne">Školné</a></li>
                 <li><a href="#rezim-dne">Režim dne</a></li>
                 <li><a href="#hodnoceni">Hodnocení</a></li>
+                <li><a href="#pedagogicky-sbor">Náš tým</a></li>
+                <li><a href="#prostory">Prostory školy</a></li>
+                <li><a href="#projekty">Projekty</a></li>
                 <li><a href="#kontakt" class="nav-btn">Kontakt</a></li>
             </ul>
         </nav>
@@ -640,6 +753,76 @@
                     <h4>Externisté a rodiče</h4>
                     <p>Do výuky a bloků povinně volitelných předmětů zapojujeme odborníky z praxe a rodiče, kteří přinášejí reálné zkušenosti.<span style="display:none">[cite: 95, 96]</span></p>
                 </div>
+            </div>
+        </div>
+    </section>
+       <section id="prostory" class="section">
+        <div class="section-header">
+            <span class="section-tag">Kde se učíme</span>
+            <h2>Prostory naší školy</h2>
+            <p class="section-subtitle">Naše zázemí je navrženo tak, aby podněcovalo kreativitu, samostatnost a poskytovalo pocit bezpečí.</p>
+        </div>
+
+        <div class="premises-intro">
+            <p>ZŠ DalMon sídlí v Brně v těsné blízkosti Filozofické fakulty Masarykovy univerzity. Budova i přilehlý areál plně odpovídají potřebám alternativního i klasického vzdělávání.</p>
+        </div>
+
+        <div class="premises-grid">
+            <div class="premises-card">
+                <div class="image-placeholder"><span><img src="kmenova.JPG"></span></div>
+                <div class="premises-info">
+                    <h4>Kmenové třídy</h4>
+                    <p>Škola disponuje pěti třídami. Každá má zóny pro individuální práci, týmové aktivity i odpočinkový kout s knihovnou.</p>
+                </div>
+            </div>
+
+            <div class="premises-card">
+                <div class="image-placeholder"><span><img src="it.JPEG"></span></div>
+                <div class="premises-info">
+                    <h4>Multifunkční a IT učebny</h4>
+                    <p>Propojujeme teorii s praxí ve dvou multifunkčních sálech a moderní učebně digitálních technologií.</p>
+                </div>
+            </div>
+
+            <div class="premises-card">
+                <div class="image-placeholder"><span><img src="zahrada.JPEG"></span></div>
+                <div class="premises-info">
+                    <h4>Zahrada a hřiště</h4>
+                    <p>Venkovní areál zahrnuje zahradu s dětským hřištěm a klidovou odpočinkovou zónou pro pobyt na čerstvém vzduchu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projekty" class="section bg-light">
+        <div class="section-header">
+            <span class="section-tag">Rozvoj nad rámec osnov</span>
+            <h2>Dlouhodobé projekty</h2>
+            <p class="section-subtitle">Propojujeme teoretické poznatky s praktickým životem a osobnostním růstem dětí.</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card animate-hover">
+                <div class="project-badge">Celoroční</div>
+                <h3>Můj roční projekt</h3>
+                <p>Každý žák si na začátku školního roku zvolí téma podle svého zájmu, na kterém samostatně pracuje pod vedením učitele. Na konci roku výsledky své práce obhajuje.</p>
+            </div>
+
+            <div class="project-card animate-hover">
+                <div class="project-badge">Eko</div>
+                <h3>Školní zahrada a environmentální program</h3>
+                <p>Prostřednictvím praktických činností na školním pozemku si žáci osvojují pozitivní vztah k přírodě. Učí se pěstovat rostliny, správně třídit odpad a aktivně chránit životní prostředí kolem nás.</p>
+            </div>
+
+            <div class="project-card animate-hover">
+                <div class="project-badge">Sociální</div>
+                <h3>Emoční inteligence</h3>
+                <p>Pravidelné aktivity a ranní kruhy pomáhají dětem rozpoznávat a zdravě zvládat vlastní emoce. Systematicky rozvíjíme empatii, respektující formy komunikace a budování stabilních mezilidských vztahů.</p>
+            </div>
+
+            <div class="project-card animate-hover">
+                <div class="project-badge">Digitální</div>
+                <h3>Digitální odpovědnost</h3>
+                <p>Vedeme žáky k bezpečnému, kritickému a odpovědnému využívání moderních technologií. Učí se správně vyhodnocovat informační zdroje a efektivně zapojovat e-learningové platformy do výuky.</p>
             </div>
         </div>
     </section>

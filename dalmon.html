@@ -366,52 +366,53 @@
 
         .premises-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            /* Nastaveno natvrdo na 3 sloupce podle tvého obrázku */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
         }
 
         .premises-card {
             background: #fff;
-            border-radius: var(--border-radius);
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
             border: 1px solid #edf2f7;
             display: flex;
             flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* Šedý placeholder pro tvé fotky - až budeš mít fotky, nahraď celý div tagem img */
-        .image-placeholder {
+        .premises-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+        }
+
+        /* Třída pro tvé reálné fotky */
+        .premises-image {
             width: 100%;
-            height: 200px;
-            background-color: #E2E8F0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #718096;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-align: center;
-            padding: 20px;
-            border-bottom: 1px solid #edf2f7;
+            height: 240px;
+            object-fit: cover; /* Zajistí, že se fotka nedeformuje, ale vyplní prostor */
+            display: block;
         }
 
         .premises-info {
             padding: 25px;
             flex-grow: 1;
+            background-color: #fff;
         }
 
         .premises-info h4 {
             color: var(--primary);
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            font-weight: 800;
         }
 
         .premises-info p {
-            font-size: 0.9rem;
-            color: #4A5568;
+            font-size: 0.95rem;
+            color: var(--text-main);
             line-height: 1.6;
+            margin: 0;
         }
 
         /* --- DLOUHODOBÉ PROJEKTY --- */

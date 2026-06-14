@@ -278,6 +278,83 @@
             line-height: 1.6;
             margin: 0;
         }
+        /* --- PEDAGOGICKÝ SBOR --- */
+        .team-layout {
+            display: grid;
+            grid-template-columns: 1.1fr 1.9fr;
+            gap: 40px;
+            align-items: stretch;
+        }
+
+        .team-intro {
+            background: linear-gradient(135deg, var(--primary) 0%, #2A4365 100%);
+            color: #fff;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(26, 54, 93, 0.15);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .team-intro h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+            line-height: 1.2;
+        }
+
+        .team-intro p {
+            font-size: 1.05rem;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .team-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #edf2f7;
+            transition: var(--transition);
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-color: var(--primary-light);
+        }
+
+        .team-icon {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            background: var(--bg-light);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            color: var(--primary);
+        }
+
+        .team-card h4 {
+            color: var(--primary);
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .team-card p {
+            font-size: 0.9rem;
+            color: #4A5568;
+            line-height: 1.5;
+        }
     </style>
 </head>
 <body>
@@ -525,6 +602,47 @@
                 <p>Každé dítě si tvoří osobní portfolio svých nejlepších prací a projektů. Slouží k sebereflexi, ohlédnutí za vlastní prací a jasné vizualizaci osobního růstu.</p>
             </div>
         </div>
+    </section>
+    <section id="pedagogicky-sbor" class="section">
+        <div class="section-header">
+            <span class="section-tag">Náš tým</span>
+            <h2>Kdo u nás učí?</h2>
+            <p class="section-subtitle">O děti se stará tým kvalifikovaných pedagogů, kteří jsou pro žáky průvodci i tradičními učiteli.<span style="display:none">[cite: 85, 89]</span></p>
+        </div>
+
+        <div class="team-layout">
+            <div class="team-intro">
+                <h3>Provázíme děti na jejich cestě<span style="display:none">[cite: 89]</span></h3>
+                <p>Náš sbor tvoří pět kmenových učitelů pro jednotlivé ročníky (při plné kapacitě 75 žáků).<span style="display:none">[cite: 86]</span> Všichni neustále rozvíjejí své kompetence v moderních vzdělávacích přístupech, jako je Montessori či Daltonský plán.<span style="display:none">[cite: 87, 88]</span> Důraz klademe na podporu samostatnosti, rozvoj kritického myšlení a budování pozitivního vztahu k učení.<span style="display:none">[cite: 90]</span></p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-icon">👩‍🏫</div>
+                    <h4>Kmenoví učitelé</h4>
+                    <p>Pět kvalifikovaných pedagogů. Každý se věnuje jedné třídě a funguje jako partner dítěte v procesu učení a individuálního rozvoje.<span style="display:none">[cite: 86, 89]</span></p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-icon">🤝</div>
+                    <h4>Asistenti pedagoga</h4>
+                    <p>Spolupracují s učiteli na zajištění individuálního přístupu k žákům a na podpoře inkluzivního vzdělávání přesně podle aktuálních potřeb dětí.<span style="display:none">[cite: 91, 92]</span></p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-icon">🧠</div>
+                    <h4>Odborná podpora</h4>
+                    <p>Přímo ve škole působí speciální pedagog a školní psycholog, kteří jsou k dispozici pro odbornou pomoc žákům, rodičům i pedagogům.<span style="display:none">[cite: 93]</span></p>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-icon">🌍</div>
+                    <h4>Externisté a rodiče</h4>
+                    <p>Do výuky a bloků povinně volitelných předmětů zapojujeme odborníky z praxe a rodiče, kteří přinášejí reálné zkušenosti.<span style="display:none">[cite: 95, 96]</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer id="kontakt" class="footer">
         <div class="footer-grid">
             <div class="footer-about">

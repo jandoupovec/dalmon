@@ -237,11 +237,45 @@
         .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 0.8rem; opacity: 0.5; }
 
         /* Responzivita */
-        @media (max-width: 900px) {
-            .navbar { flex-direction: column; gap: 15px; }
-            .hero-section h1 { font-size: 2.5rem; }
-            .grid-two-columns, .subjects-layout, .tuition-container, .footer-grid { grid-template-columns: 1fr; }
-        }
+/* --- KOMPLEXNÍ RESPONZIVITA --- */
+
+/* Tablety a menší notebooky */
+@media (max-width: 992px) {
+    .section { padding: 60px 5%; }
+    .hero-section h1 { font-size: 2.8rem; }
+    .grid-two-columns, .subjects-layout, .tuition-container, .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+    .visual-placeholder { min-height: 300px; }
+}
+
+/* Mobilní telefony - na šířku a běžné mobily */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 15px; padding: 15px 5%; text-align: center; }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 10px 20px; }
+    
+    .hero-section { height: auto; min-height: 85vh; padding: 100px 5% 60px; text-align: center; }
+    .hero-content { margin: 0 auto; }
+    .hero-section h1 { font-size: 2.2rem; }
+    .hero-actions { flex-direction: column; align-items: center; width: 100%; max-width: 300px; margin: 0 auto; }
+    .btn { width: 100%; text-align: center; }
+    
+    .stats-grid { grid-template-columns: 1fr; }
+    .tuition-main-card { padding: 25px; }
+    .amount { font-size: 3rem; }
+    
+    /* Rozvrh dne - zalamování na mobilu */
+    .time-block { flex-direction: column; gap: 8px; text-align: center; padding: 15px; }
+    .time-range { color: var(--primary-light); font-size: 0.9rem; }
+}
+
+/* Malé mobilní telefony */
+@media (max-width: 480px) {
+    .hero-section h1 { font-size: 1.8rem; }
+    .section h2 { font-size: 1.6rem; }
+    .nav-links { flex-direction: column; width: 100%; gap: 10px; }
+    .nav-links a { display: block; padding: 10px; background: var(--bg-light); border-radius: 10px; }
+    .nav-btn { background: var(--primary); }
+    .premises-grid { grid-template-columns: 1fr; }
+}
         /* --- HODNOCENÍ SEKCE --- */
         .evaluation-grid {
             display: grid;
